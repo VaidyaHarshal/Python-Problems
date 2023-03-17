@@ -1,1 +1,1 @@
-    print(fact)
+sort
