@@ -22,7 +22,7 @@ print(lstNum)
 
 
 """
-Question:
+Question 21:
 A robot moves in a plane starting from the original point (0,0). The robot can move toward UP, DOWN, LEFT and RIGHT with a given steps. The trace of robot movement is shown as the following:
 
 UP 5

@@ -1,1 +1,2 @@
-sort
+
+        self.name = 'car2'
