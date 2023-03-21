@@ -8,6 +8,11 @@ for i in range(2000,3201):         # For the range of i between the numbers 2000
         print(i, end=',')          # Printing the numbers in a comma seperated format
 print("\b")
 
+## Optimized Method
+#result = [i for i in range(2000,3201) if i % 7 == 0 and i % 5 != 0 ]   
+#List comprehension to check the divisibility of i by 7 and 5
+#print(*result, sep=",")         # Printing values of list in comma seperated format
+
 """ 
 Question 2:
 Write a program which can compute the factorial of a given numbers.The results should be printed in a comma-separated sequence on a single line. Suppose the following input is supplied to the program: 8 Then, the output should be:40320
@@ -30,10 +35,11 @@ With a given integral number n, write a program to generate a dictionary that co
 """
 
 def gen_dict(val):
-    ans = {}                    # Initializing the object
-    for i in range(1, val+1):   # For the value range of 1 till val + 1 
-        ans[i] = i * i          # Setting the value into object for the key of i
-    print(ans)
+    ans = {}                     # Initializing the object
+    #for i in range(1, val+1):   # For the value range of 1 till val + 1 
+    #    ans[i] = i * i          # Setting the value into object for the key of i
+    ans = {i: i*i for i in range(1,val+1)}  # List comprehension to generate a dictionary
+    return ans
 print(f"Enter the number of values to be entered into dictionary")
 val = int(input())              # Taking input value from the user
-gen_dict(val)                   # Calling the gen_dict function and passing the input value
+print(gen_dict(val))            # Calling the gen_dict function and passing the input value
